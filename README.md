@@ -13,21 +13,20 @@
 
 - MS Computer Science @ **USC Viterbi School of Engineering** (graduating May 2026)
 - Building real-time, high-performance systems — from GPU-accelerated simulations to game engine architecture to XR applications
-- Currently: **Software Engineer @ USC Institute for Creative Technologies** (Meta Quest 3 VR/MR)
-- Also: **Teaching Assistant** for CSCI 522 Game Engine Development & Applied Neural Networks
+- **Teaching Assistant** for CSCI 522 Game Engine Development & Applied Neural Networks at USC Viterbi
 - Seeking **full-time SWE roles** in Graphics, XR/VR, or high-performance systems | F-1 OPT eligible
 
 ---
 
 ## Tech Stack
 
-**Languages:** C++ · C# · Python · GLSL · Lua · JavaScript
+**Languages:** C++ · C# · Python · Java · JavaScript/TypeScript · SQL (PostgreSQL, MySQL) · NoSQL (MongoDB) · HTML5 · GLSL · CUDA
 
-**Graphics & GPU:** DirectX 12 · OpenGL · CUDA · WebGL · ShaderLab
+**Frameworks & Technologies:** Unity · Unreal Engine · Three.js · WebXR API · OpenGL · Vulkan · DirectX 11 · WebGL · .NET Core · ASP.NET
 
-**Engines & Frameworks:** Unreal Engine 5 · Unity · PrimeEngine · Meta XR SDK · WebXR · Three.js
+**Tools & DevOps:** Git/GitHub · Perforce · Visual Studio · VS Code · AWS · Azure · Docker · Postman · GitHub Actions
 
-**Tools:** CMake · Perforce · Git · Visual Studio · Maya · SDL2
+**CS Fundamentals:** Multithreading · Real-time Systems · Distributed Systems · Performance Optimization · System Design · Data Structures & Algorithms
 
 ---
 
