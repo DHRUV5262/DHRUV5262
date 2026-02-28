@@ -1,5 +1,5 @@
-<h1 align="center">Hi, I'm Dhruv Rajvansh 👋</h1>
-<h3 align="center">Graphics & Game Engine Engineer | C++ | CUDA | DirectX 12 | XR/VR | MS CS @ USC Viterbi</h3>
+<h1 align="center">Hey, I'm Dhruv 👋</h1>
+<h3 align="center">I write C++ and think about render pipelines more than I probably should</h3>
 
 <p align="center">
   <a href="https://www.linkedin.com/in/dhruv-rajvansh/"><img src="https://img.shields.io/badge/LinkedIn-blue?style=flat&logo=linkedin" alt="LinkedIn"/></a>
@@ -11,14 +11,15 @@
 
 ## About Me
 
-- MS Computer Science @ **USC Viterbi School of Engineering** (graduating May 2026)
-- Building real-time, high-performance systems — from GPU-accelerated simulations to game engine architecture to XR applications
-- **Teaching Assistant** for CSCI 522 Game Engine Development & Applied Neural Networks at USC Viterbi
-- Seeking **full-time SWE roles** in Graphics, XR/VR, or high-performance systems | F-1 OPT eligible
+I'm a CS grad student at USC Viterbi wrapping up my Master's in May 2026. My focus is pretty deep in the graphics and game engine space — C++, GPU programming, real-time systems.
+
+I spent a lot of this past year doing two things: building a GPU particle physics engine to really understand what CUDA kernel design does to performance (spoiler: kernel fusion matters more than memory layout alone), and extending PrimeEngine with frustum culling, LOD pipelines, and skeletal animation systems from scratch.
+
+Right now I TA for CSCI 522 (Game Engine Development) and Applied Neural Networks at USC. Graduating May 2026, looking for full-time roles in graphics, XR, or high-performance C++ systems. F-1 OPT eligible.
 
 ---
 
-## Tech Stack
+## What I Work With
 
 **Languages:** C++ · C# · Python · Java · JavaScript/TypeScript · SQL (PostgreSQL, MySQL) · NoSQL (MongoDB) · HTML5 · GLSL · CUDA
 
@@ -30,27 +31,37 @@
 
 ---
 
-## Featured Projects
+## Projects I'm Most Proud Of
 
-### GPU-Accelerated Particle Simulation (C++/CUDA)
-> Benchmarked 5 solver variants (CPU single-thread, GPU AoS, SoA unfused/fused, auto-tuned) at up to 400K particles. Achieved **41x CPU speedup** with SoA fused + auto-tuned block size. Built real-time SDL2 visualizer with live solver swapping.
+### GPU Particle Simulation — C++/CUDA
+
+I ran the same physics simulation (gravity + spring force + Euler integration) 5 different ways to actually measure what makes GPU code fast vs slow. CPU baseline, naive AoS GPU, SoA unfused, SoA fused, and auto-tuned block sizes.
+
+The result that surprised me most: SoA unfused was *slower* than the naive AoS approach at 400K particles (20ms vs 14ms). Splitting into two kernels forced an extra global memory round-trip that wiped out the coalescing gains. Fusing fixed it — down to 11ms. Auto-tuning got it to 9.6ms.
+
+At 1K particles the CPU (0.75ms) still beats the GPU (1.05ms) because kernel launch overhead dominates. That's the kind of thing you only learn by actually measuring.
 
 **[View Repo](https://github.com/DHRUV5262/-GPU-Accelerated-Particle-Simulation-with-CPU-baseline)**
 
 ---
 
-### PrimeEngine: Optimization & Architecture (C++/DirectX 12)
-> Extended PrimeEngine with AABB frustum culling (100+ mesh instances → stable 60 FPS), data-driven LOD pipeline using Python meta-files + Lua scripting, distance-based skeletal animation throttling, and partial-body animation blending.
+### PrimeEngine: Culling, LOD, Animation — C++/DirectX 12
+
+Extended a real game engine (PrimeEngine, used in USC's CSCI 522 course) with CPU-side AABB frustum culling, a data-driven LOD pipeline using Python meta-files and Lua scripting, and distance-based animation throttling.
+
+The frustum culling went from constant crashes at 100+ mesh instances to a stable 60 FPS. The animation work taught me why you can't just skip bone updates — the GPU shader expects a valid matrix at every index, so skipping a bone corrupts geometry downstream.
 
 ---
 
 ### Meta Quest 3 VR/MR — USC ICT (C#/Unity)
-> Modernized VITA virtual human systems for Meta Quest 3 using Meta All-in-One SDK. Implemented mixed-reality passthrough, room-scale locomotion, adaptive animation controllers, and multimodal speech/emotion recognition for therapeutic training environments.
+
+Ported legacy virtual human systems to Quest 3 using Meta's All-in-One SDK. Rebuilt the passthrough integration, locomotion system, and animation controllers. Also added speech and emotion recognition so the virtual humans could respond dynamically during training simulations.
 
 ---
 
-### WebXR Interactive Experience (Three.js/WebGL)
-> Immersive browser-based XR application using Three.js and WebXR API.
+### WebXR — Three.js/WebGL
+
+Browser-based XR app using Three.js and the WebXR API. Runs in-browser, no headset required for basic interaction.
 
 **[View Repo](https://github.com/DHRUV5262/WebXR)**
 
@@ -65,4 +76,4 @@
 
 ---
 
-<p align="center">Open to full-time opportunities — let's build something fast. <a href="https://www.linkedin.com/in/dhruv-rajvansh/">Connect on LinkedIn</a></p>
+<p align="center">Always down to talk C++, shaders, or GPU internals. <a href="https://www.linkedin.com/in/dhruv-rajvansh/">Find me on LinkedIn</a></p>
