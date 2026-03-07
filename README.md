@@ -1,4 +1,4 @@
-## Hi, I’m Dhruv Rajvansh
+## Hi, I’m Dhruv
 
 I build real-time systems across **graphics**, **XR/VR**, and general **software engineering**.
 
