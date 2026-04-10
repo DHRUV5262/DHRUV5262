@@ -6,7 +6,7 @@ I build real-time systems across **graphics**, **XR/VR**, and general **software
 - 🎮 Background in game engines, rendering, physics, and real-time interaction  
 - 🥽 XR/VR development with modern headsets and tooling  
 - 💻 Comfortable working across simulation, backend-style services, and tooling  
-- 🎓 MS Computer Science @ USC (’26) · F-1 (OPT) · Open to Software Engineer, Graphics, Engine, and XR roles  
+- 🎓 MS Computer Science @ USC (’26) 
 
 What you’ll find here:
 - Engine, rendering, and simulation experiments  
